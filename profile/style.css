@@ -1,0 +1,45 @@
+.clients {
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.client {
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    border-radius: 10px;
+    border: 2px solid #000080;
+    transition-property: margin, width, height;
+    transition-duration: 700ms;
+}
+
+.client:hover {
+    margin: 0;
+    width: 170px;
+}
+
+.client img {
+    width: 100%;
+    border-radius: 50%;
+    border: inherit;
+}
+
+.client span {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.client input {
+    cursor: pointer;
+    border-radius: inherit;
+    border: inherit;
+    border-color: red;
+    color: red;
+    background: none;
+}

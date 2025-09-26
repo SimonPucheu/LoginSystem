@@ -19,8 +19,6 @@ class Identified
     public $signedIn = false;
     public function __construct($unidentified)
     {
-        var_dump($_ENV['SQL_USERNAME']);
-        var_dump($_ENV['SQL_PASSWORD']);
         $this -> db = new \SQL("localhost", "users", $_ENV['SQL_USERNAME'], $_ENV['SQL_PASSWORD']);
         $this -> db -> initialize();
         $this -> username = $unidentified -> username;
@@ -89,7 +87,7 @@ class Unidentified
         {
             return false;
         }
-        $response = $this -> db -> request("INSERT INTO users (username, password, name, lang) VALUES (:username, :password, :name, :lang)", ["username" => $this -> username, "password" => $this -> password, "name" => $this -> name, "lang" => $this -> lang]);
+        $response = $this -> db -> request("INSERT INTO users (username, password, name) VALUES (:username, :password, :name)", ["username" => $this -> username, "password" => $this -> password, "name" => $this -> name]);
         return $this;
     }
 }

@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/src/env.php');
+require_once(__DIR__ . '/../src/env.php');
 $dsn      = 'mysql:dbname=oauth;host=localhost';
 $username = $_ENV['SQL_USERNAME'];
 $password = $_ENV['SQL_PASSWORD'];
